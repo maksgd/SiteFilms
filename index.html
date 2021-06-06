@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Films</title>
+</head>
+
+<!-- Sprite -->
+<svg style="display: none;">
+
+    <symbol id="loupe" viewBox="0 0 56.966 56.966">
+        <g>
+            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+	s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+	c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+	s-17-7.626-17-17S14.61,6,23.984,6z"/>
+        </g>
+    </symbol>
+
+    <symbol id="eye" viewBox="0 0 488.85 488.85">
+        <g>
+            <path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2
+            s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025
+            c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3
+            C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7
+            c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z"/>
+        </g>
+    </symbol>
+
+    <symbol id="info-button" viewBox="0 0 45.999 45.999">
+        <g>
+            <path d="M39.264,6.736c-8.982-8.981-23.545-8.982-32.528,0c-8.982,8.982-8.981,23.545,0,32.528c8.982,8.98,23.545,8.981,32.528,0
+			C48.245,30.281,48.244,15.719,39.264,6.736z M25.999,33c0,1.657-1.343,3-3,3s-3-1.343-3-3V21c0-1.657,1.343-3,3-3s3,1.343,3,3V33z
+			 M22.946,15.872c-1.728,0-2.88-1.224-2.844-2.735c-0.036-1.584,1.116-2.771,2.879-2.771c1.764,0,2.88,1.188,2.917,2.771
+			C25.897,14.648,24.746,15.872,22.946,15.872z"/>
+        </g>
+    </symbol>
+
+    <symbol id="ticket" viewBox="0 -54 478.64247 478">
+        <g>
+            <path d="m134.640625 155.117188h16v32h-16zm0 0"/><path d="m134.640625 195.117188h16v32h-16zm0 0"/><path d="m134.640625 235.117188h16v32h-16zm0 0"/><path d="m134.640625 275.117188h16v32h-16zm0 0"/><path d="m134.640625 315.117188h16v32h-16zm0 0"/><path d="m374.640625 155.117188h16v32h-16zm0 0"/><path d="m374.640625 195.117188h16v32h-16zm0 0"/>
+            <path d="m374.640625 235.117188h16v32h-16zm0 0"/><path d="m374.640625 275.117188h16v32h-16zm0 0"/><path d="m374.640625 315.117188h16v32h-16zm0 0"/><path d="m470.640625 219.117188c4.421875 0 8-3.582032 8-8v-72c0-4.417969-3.578125-8-8-8h-53.964844c-6.960937-7.449219-9.894531-17.796876-7.878906-27.789063s8.734375-18.398437 18.039063-22.5625c4.003906-1.875 5.730468-6.636719 3.855468-10.640625l-30.449218-65.191406c-1.867188-4-6.621094-5.726563-10.625-3.863282l-278.976563 130.046876h-56c-4.417969 0-8 3.582031-8 8v18.175781l-42.007813 19.527343c-1.925781.894532-3.417968 2.515626-4.144531 4.511719-.730469 1.992188-.636719 4.195313.257813 6.121094l30.398437 65.28125c.898438 1.925781 2.523438 3.417969 4.523438 4.144531 1.996093.726563 4.203125.628906 6.125-.273437 14.289062-6.554688 31.222656-1.761719 39.953125 11.3125-5.789063 9.421875-16.046875 15.171875-27.105469 15.199219-4.417969 0-8 3.582031-8 8v72c0 4.417968 3.582031 8 8 8h416c4.421875 0 8-3.582032 8-8v-72c0-4.417969-3.578125-8-8-8-17.671875 0-32-14.328126-32-32 0-17.671876 14.328125-32 32-32zm-81.542969-200.167969 24 51.3125c-19.269531 13.324219-26.132812 38.59375-16.253906 59.839843.167969.359376.421875.664063.597656 1.015626h-70.742187l-21.65625-46.503907c-1.871094-4.003906-6.628907-5.734375-10.632813-3.863281l-108.023437 50.367188h-37.894531zm-80.054687 112.167969h-84.800781l69.65625-32.488282zm-266.480469 108.214843-23.921875-51.414062 28-12.976563v36.175782c0 4.417968 3.582031 8 8 8 16.953125.042968 30.921875 13.320312 31.824219 30.246093-12.085938-10.371093-28.507813-14.125-43.902344-10.03125zm420.078125 59.121094v56.664063h-400v-56.664063c23.117187-3.886719 40.046875-23.898437 40.046875-47.335937 0-23.441407-16.929688-43.449219-40.046875-47.335938v-56.664062h400v56.664062c-23.113281 3.886719-40.042969 23.894531-40.042969 47.335938 0 23.4375 16.929688 43.449218 40.042969 47.335937zm0 0"/><path d="m350.640625 163.117188h-176c-4.417969 0-8 3.582031-8 8v160c0 4.417968 3.582031 8 8 8h176c4.421875 0 8-3.582032 8-8v-160c0-4.417969-3.578125-8-8-8zm-8 160h-160v-144h160zm0 0"/><path d="m312.757812 63.371094 14.5-6.761719 13.523438 29-14.5 6.761719zm0 0"/>
+            <path d="m329.660156 99.621094 14.503906-6.757813 13.515626 29.003907-14.5 6.761718zm0 0"/>
+        </g>
+    </symbol>
+
+    <symbol id="play" viewBox="0 0 494.942 494.942">
+        <g>
+            <path d="m35.353 0 424.236 247.471-424.236 247.471z"/>
+        </g>
+    </symbol>
+
+</svg>
+
+<body>
+
+    <div class="header">
+        <!-- Header -->
+        <div class="container">
+
+            <div class="header__inner">
+
+                <!-- Left -->
+                <div class="nav">
+                    <div class="nav__link__container">
+                        <img class="header__logo" src="header/logo.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Center -->
+                <div class="nav">
+                    <a class="nav__link__container bg__red" href="#">
+                        <span class="nav__link">Box Office</span>
+                    </a>
+                    <a class="nav__link__container bg__red" href="#">
+                        <span class="nav__link">Media</span>
+                    </a>
+                    <a class="nav__link__container bg__red" href="#">
+                        <span class="nav__link">Society</span>
+                    </a>
+                    <a class="nav__link__container bg__red" href="#">
+                        <span class="nav__link">Ratings</span>
+                    </a>
+                    <a class="nav__link__container bg__red" href="#">
+                        <span class="nav__link">DVD & Blu-Ray</span>
+                    </a>
+                </div>
+
+                <!-- Right -->
+                <div class="nav">
+                    <div class="nav__link__container">
+                        <a href="#">
+                            <svg class="social">
+                                <use xlink:href="#loupe"></use>
+                            </svg>
+                        </a>
+                        <div class="header__photo">
+                            <img src="header/Oval.png" alt="">
+                            <div class="header__num">8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /Header -->
+
+
+
+
+
+
+    <!-- Now__Playing -->
+    <div class="now__playing">
+
+        <div class="np__item">
+            <img class="np__photo" src="now-playing/assas.jpg" alt="">
+
+            <!-- Появляется после наводки -->
+            <div class="np__content">
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#info-button"></use>
+                        </svg>
+                    <span class="np__text">Information</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#ticket"></use>
+                        </svg>
+                    <span class="np__text">Buy ticket</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#eye"></use>
+                        </svg>
+                    <span class="np__text">Add to watch list</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="np__item">
+            <img class="np__photo" src="now-playing/fant.jpg" alt="">
+
+            <!-- Появляется после наводки -->
+            <div class="np__content">
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#info-button"></use>
+                        </svg>
+                    <span class="np__text">Information</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#ticket"></use>
+                        </svg>
+                    <span class="np__text">Buy ticket</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#eye"></use>
+                        </svg>
+                    <span class="np__text">Add to watch list</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="np__item">
+            <img class="np__photo" src="now-playing/dock.jpg" alt="">
+
+            <!-- Появляется после наводки -->
+            <div class="np__content">
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#info-button"></use>
+                        </svg>
+                    <span class="np__text">Information</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#ticket"></use>
+                        </svg>
+                    <span class="np__text">Buy ticket</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#eye"></use>
+                        </svg>
+                    <span class="np__text">Add to watch list</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="np__item">
+            <img class="np__photo" src="now-playing/Bourne.png" alt="">
+
+            <!-- Появляется после наводки -->
+            <div class="np__content">
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#info-button"></use>
+                        </svg>
+                    <span class="np__text">Information</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#ticket"></use>
+                        </svg>
+                    <span class="np__text">Buy ticket</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#eye"></use>
+                        </svg>
+                    <span class="np__text">Add to watch list</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="np__item">
+            <img class="np__photo" src="now-playing/women.jpeg" alt="">
+
+            <!-- Появляется после наводки -->
+            <div class="np__content">
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#info-button"></use>
+                        </svg>
+                    <span class="np__text">Information</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#ticket"></use>
+                        </svg>
+                    <span class="np__text">Buy ticket</span>
+                </a>
+                <a class="np__group np__bg" href="#">
+                        <svg class="np__social">
+                            <use xlink:href="#eye"></use>
+                        </svg>
+                    <span class="np__text">Add to watch list</span>
+                </a>
+            </div>
+
+        </div>
+     
+    </div> <!-- /Now__Playing -->
+
+
+
+
+
+    <div class="container">
+        <div class="trailers"> <!-- Blok__Trailers -->
+
+            <!-- LEFT -->
+            <div class="tr__left">
+
+                <div class="tr__left__flex">
+                    <div class="tr__left__photo">
+                        <img src="blok-born/Bourne.png" alt="">
+                    </div>
+
+                    <div class="tr__left__text">
+
+                        <div class="tlt__head">Jason Bourne</div>
+                        
+                        <div class="tlt__text">
+                            <div class="tlt__text_1">
+                                <div class="tlt__textin">year</div>
+                                <div class="tlt__textin">country</div>
+                                <div class="tlt__textin">director</div>
+                                
+                                <div class="tlt__textin">genres</div>
+                                <div class="tlt__textin">budget</div>
+                                <div class="tlt__textin">duration</div>
+                            </div>
+
+                            <div class="tlt__text_2">
+                                <div class="tlt__textin__2">2016</div>
+                                <div class="tlt__textin__2">USA</div>
+                                <div class="tlt__textin__2">Paul Greengrass</div>
+                                <div class="tlt__textin__2">
+
+                                    <div class="bord__1"></div>
+                                    <div class="bg__bord__1">action</div>
+                                    <div class="bord__2"></div>
+                                    <div class="bg__bord__2">thriller</div>
+                                    
+                                </div>
+                                <div class="tlt__textin__2">$120 000 000</div>
+                                <div class="tlt__textin__2">123 min</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tr__left__flex__footer">
+
+                    <div class="tlt__footer">
+                        You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about 
+                        to get their new computer by telling them.
+                    </div>
+
+                    <div class="tr__left__fb">
+
+                        <div class="tr__left__item">
+                            <img class="tli__photo" src="blok-born/Rectangle 2 Copy.png" alt="">
+                        </div>
+                        <div class="tr__left__item">
+                            <img class="tli__photo" src="blok-born/Rectangle 2 Copy 5.png" alt="">
+                        </div>
+                        <div class="tr__left__item">
+                            <img class="tli__photo" src="blok-born/Rectangle 2 Copy 6.png" alt="">
+                        </div>
+                        <div class="tr__left__item">
+                            <img class="tli__photo" src="blok-born/Rectangle 2 Copy 7.png" alt="">
+                        </div>
+                        <div class="tr__left__item">
+                            <img class="tli__photo" src="blok-born/Rectangle 2 Copy 8.png" alt="">
+                        </div>
+                        <div class="tr__left__item">
+                            <img class="tli__photo" src="blok-born/Rectangle 2 Copy 9.png" alt="">
+                        </div>
+                        <div class="tr__left__item">
+                            <img class="tli__photo" src="blok-born/Rectangle 2 Copy 6.png" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="tr__right">
+                <div class="tr__photo">
+                    <img src="blok-born/Jason-Bourne-(2016).png" alt="">
+                    <div class="tr__bg"></div>
+                </div>
+
+                <!-- Play -->
+                <div class="tr__play"> 
+                    <a href="#">
+                        <svg class="tr__social">
+                            <use xlink:href="#play"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Btn__footer -->
+                <div class="btn__f">
+
+                    <div class="btn__f__item">
+                        <div class="btn__f__content">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="btn__f__item">
+                        <div class="btn__f__content ">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="btn__f__item">
+                        <div class="btn__f__content">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="btn__f__item">
+                        <div class="btn__f__content">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="btn__f__item">
+                        <div class="btn__f__content ">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="btn__f__item">
+                        <div class="btn__f__content">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="btn__f__item">
+                        <div class="btn__f__content">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    
+                </div><!-- /Btn__footer -->
+
+                <div class="tr__text">
+                    <div class="tr__text__1">Jason Bourne (2016)</div>
+                    <div class="tr__text__2">Stars: Matt Damon, Tommy Lee Jones, Alicia Vikander</div>
+                </div>
+            </div>
+        </div> <!-- /Blok__Trailers -->
+    </div>
+
+
+
+    <div class="container">
+        <div class="last__news">
+
+            <!-- Первый элемент -->
+            <div class="ln__first">
+                <div class="ln__flex">
+
+                    <div class="ln__text__item">
+                        <div class="ln__ferst__text__1">Last News</div>
+                        <div class="ln__ferst__text__2">Top  |  Movies  |  TV  |  Celebs</div>
+                    </div>
+
+                    <div class="ln__first__item">
+                        <img src="ln-first/Rectangle 1.png" alt="">
+                        <div class="ln__first__item__text">
+                            <div class="ln__first__item__text__1">Jared Leto Joins 
+                                ‘Blade Runner’ Sequel</div>
+                            <div class="ln__first__item__text__2">Jared Leto has joined the upcoming “Blade Runner” sequel, TheWrap has learned. See more</div>
+                        </div>
+                    </div>
+
+                    <div class="ln__first__item">
+                        <img src="ln-first/Rectangle 2.png" alt="">
+                        <div class="ln__first__item__text">
+                            <div class="ln__first__item__text__1">Toho to Produce First ‘Godzilla’ Animation Movie</div>
+                            <div class="ln__first__item__text__2">Tokyo – Japan’s movie giant, Toho has announced the production of a feature-length Godzilla animation. See more</div>
+                        </div>
+                    </div>
+
+                    <div class="ln__first__item">
+                        <img src="ln-first/Rectangle 3.png" alt="">
+                        <div class="ln__first__item__text">
+                            <div class="ln__first__item__text__1">Watch Mysterious New 'American Horror Story' Trailer</div>
+                            <div class="ln__first__item__text__2">Leave it to Ryan Murphy and his team from FX's terrifying American Horror Story to keep fans…See more</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Центральный элемент -->
+            <div class="ln__center">
+                <div class="ln__flex">
+
+                    <div class="ln__text__item">
+                        <div class="ln__ferst__text__1">Born today</div>
+                        <div class="ln__ferst__text__2">See all birthdays</div>
+                    </div>
+
+                    
+                    <div class="lnc__item">
+
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12.png" alt="">
+                            <div class="lnc__inner__text">Keanu Reeves</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (1).png" alt="">
+                            <div class="lnc__inner__text">Salma Hayek</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (2).png" alt="">
+                            <div class="lnc__inner__text">Mark Harmon</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (3).png" alt="">
+                            <div class="lnc__inner__text">Cynthia Watros</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (4).png" alt="">
+                            <div class="lnc__inner__text">Austin Abrams</div>
+                        </div>
+
+                    </div>
+
+                    <div class="ln__text__item">
+                        <div class="ln__ferst__text__1">See on Netflix</div>
+                        <div class="ln__ferst__text__2">See all</div>
+                    </div>
+
+                    <div class="lnc__item">
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (5).png" alt="">
+                            <div class="lnc__inner__text">Keanu Reeves</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (6).png" alt="">
+                            <div class="lnc__inner__text">Salma Hayek</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (7).png" alt="">
+                            <div class="lnc__inner__text">Mark Harmon</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (8).png" alt="">
+                            <div class="lnc__inner__text">Cynthia Watros</div>
+                        </div>
+                        <div class="lnc__inner">
+                            <img class="lnc__inner__photo" src="ln-center/Rectangle 12 (9).png" alt="">
+                            <div class="lnc__inner__text">Austin Abrams</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Последний элемент -->
+            <div class="ln__last">
+                <div class="ln__flex">
+
+                    <div class="lnl__item">
+                        <img class="lnl__photo" src="ln-last/Stranger-Things-Wallpaper-1024x576.png" alt="">
+                        <div class="lnl__photo__text">Stranger Things</div>
+                    </div>
+
+                    <div class="lnl__item">
+                        <img class="lnl__photo" src="ln-last/Squad-Wallpaper-HD-Download-7.png" alt="">
+                        <div class="lnl__photo__text">Suicide Squad</div>
+                    </div>
+
+                    <div class="lnl__item">
+                        <img class="lnl__photo" src="ln-last/Star-Trek-Beyond-2016-Poster.png" alt="">
+                        <div class="lnl__photo__text">Star Trek Beyond</div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- Last__News -->
+    </div> <!-- Container -->
+
+
+</body>
+
+</html>
